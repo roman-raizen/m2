@@ -17,10 +17,9 @@ use {
 
 #[derive(AnchorSerialize, AnchorDeserialize)]
 pub struct SellArgs {
-  pub _program_as_signer_bump: u8,
-  pub buyer_price: u64,
-  pub token_size: u64,
-  pub seller_state_expiry: i64,
+  pub price: u64,
+  pub expiry: i64,
+  pub compression_proof: Option<Vec<u8>>,
 }
 
 #[derive(Accounts)]
