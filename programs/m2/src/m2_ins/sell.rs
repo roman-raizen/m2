@@ -15,6 +15,14 @@ use {
     spl_token::instruction::AuthorityType,
 };
 
+#[derive(AnchorSerialize, AnchorDeserialize)]
+pub struct SellArgs {
+  pub _program_as_signer_bump: u8,
+  pub buyer_price: u64,
+  pub token_size: u64,
+  pub seller_state_expiry: i64,
+}
+
 #[derive(Accounts)]
 pub struct Sell<'info> {
     #[account(mut)]
