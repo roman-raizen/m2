@@ -2,9 +2,9 @@
 
 pub mod constants;
 mod errors;
-mod m2_ins;
+pub mod m2_ins;
 pub mod mip1_ins;
-mod ocp_ins;
+pub mod ocp_ins;
 pub mod states;
 mod utils;
 
